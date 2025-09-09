@@ -1,44 +1,78 @@
-# 🌟 Lumi App
+# 🌟 Lumi - MVP
 
-Backend do projeto **Lumi**, um aplicativo focado em [descrição breve do objetivo do app, ex: organização pessoal, produtividade ou automação de tarefas].
-
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![Uvicorn](https://img.shields.io/badge/Uvicorn-FF4C00?logo=python&logoColor=white)
-![Build Status](https://img.shields.io/github/actions/workflow/status/JulianaAigueira/lumi-app/python-app.yml?branch=main)
-![Codecov](https://img.shields.io/codecov/c/github/JulianaAigueira/lumi-app?branch=main)
-![License](https://img.shields.io/badge/License-MIT-green)
+O **Lumi** é um aplicativo de acessibilidade que ajuda pessoas com deficiência visual e auditiva a interagir com o mundo físico de forma mais autônoma.  
+Ele utiliza **inteligência artificial** para leitura, descrição de imagens e transcrição de áudio.
 
 ---
 
-## 📝 Funcionalidades
-
-- 🔹 API REST com **FastAPI**
-- 🔹 Autenticação e gerenciamento de usuários
-- 🔹 Conexão com banco de dados
-- 🔹 Endpoints organizados e documentados
-- 🔹 Estrutura escalável para futuras funcionalidades
-- 🔹 Testes automatizados com cobertura de código
+## 🎯 Objetivo
+Oferecer recursos essenciais de acessibilidade em um aplicativo simples e intuitivo, com botões grandes, contraste acessível e retorno em texto/voz.
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+## 🔹 Funcionalidades do MVP
 
-- **Python 3.x**
-- **FastAPI**
-- **SQLAlchemy** / Banco de dados (PostgreSQL, SQLite, etc.)
-- **Uvicorn** (servidor ASGI)
-- **Pydantic** (validação de dados)
-- **Dotenv** (variáveis de ambiente)
-- **Pytest** (testes unitários)
-- **GitHub Actions** (CI/CD)
-- **Codecov** (cobertura de testes)
+### 1. 📷 Câmera Inteligente
+- O usuário tira uma foto.
+- O backend processa e a IA descreve a cena.
+- A descrição pode ser exibida na tela ou narrada em voz (TTS).
+
+### 2. 📄 Leitura de Texto (OCR + TTS)
+- O usuário fotografa um texto (placa, documento, livro, cardápio).
+- O OCR converte a imagem em texto.
+- O texto pode ser exibido ou narrado em voz.
+
+### 3. 🎙️ Transcrição de Áudio (STT)
+- O usuário grava um áudio ou fala no microfone.
+- O backend converte em texto.
+- O texto é exibido na tela.
+
+### 4. 🎤 Comando de Voz
+- O usuário emite comandos simples (ex: “ler texto”).
+- O app ativa automaticamente a funcionalidade correspondente.
 
 ---
 
-## 🚀 Como Rodar Localmente
+## 🔹 Funcionalidades Futuras
+- Configurações de acessibilidade (volume, contraste, velocidade da fala).
+- Suporte multilíngue (português e inglês).
+- Histórico das últimas 5 ações.
 
-1. Clonar o repositório:  
-   ```bash
-   git clone https://github.com/JulianaAigueira/lumi-app.git
-   cd lumi-app
+---
+
+## 🛠️ Tecnologias
+- **Frontend:** (a definir – ex: React Native / Flutter)  
+- **Backend:** FastAPI (Python)  
+- **IA:** OCR, TTS, STT, visão computacional  
+- **Banco de dados:** (se necessário para histórico)
+
+---
+
+## 📂 Estrutura do Projeto
+
+
+lumi-app/
+├── backend/ # Código do backend (API FastAPI, IA, OCR, TTS, STT)
+├── frontend/ # Aplicativo mobile/web
+├── docs/ # Documentação, wireframes, anotações
+├── README.md # Documentação inicial do projeto
+├── .gitignore # Arquivos/pastas ignorados pelo Git
+└── requirements.txt # Dependências do backend
+
+
+
+---
+
+## 🚀 Como rodar (inicialmente)
+```bash
+# Clonar o repositório
+git clone https://github.com/seu-usuario/lumi-app.git
+
+cd lumi-app
+
+# Instalar dependências do backend
+pip install -r requirements.txt
+
+👥 Contribuidores
+
+Juliana Aigueira – Idealizador(a) e desenvolvedor(a) inicial
