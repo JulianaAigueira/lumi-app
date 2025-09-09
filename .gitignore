@@ -1,0 +1,19 @@
+# Configurações do PyCharm
+.idea/
+
+# Ambiente virtual
+venv/
+
+# Arquivos Python compilados
+*.pyc
+__pycache__/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
