@@ -1,78 +1,90 @@
-# 🌟 Lumi - MVP
+# Lumi App
 
-O **Lumi** é um aplicativo de acessibilidade que ajuda pessoas com deficiência visual e auditiva a interagir com o mundo físico de forma mais autônoma.  
-Ele utiliza **inteligência artificial** para leitura, descrição de imagens e transcrição de áudio.
+Lumi é um aplicativo de acessibilidade que oferece ferramentas para leitura e interpretação de conteúdos multimídia:
 
----
-
-## 🎯 Objetivo
-Oferecer recursos essenciais de acessibilidade em um aplicativo simples e intuitivo, com botões grandes, contraste acessível e retorno em texto/voz.
-
----
-
-## 🔹 Funcionalidades do MVP
-
-### 1. 📷 Câmera Inteligente
-- O usuário tira uma foto.
-- O backend processa e a IA descreve a cena.
-- A descrição pode ser exibida na tela ou narrada em voz (TTS).
-
-### 2. 📄 Leitura de Texto (OCR + TTS)
-- O usuário fotografa um texto (placa, documento, livro, cardápio).
-- O OCR converte a imagem em texto.
-- O texto pode ser exibido ou narrado em voz.
-
-### 3. 🎙️ Transcrição de Áudio (STT)
-- O usuário grava um áudio ou fala no microfone.
-- O backend converte em texto.
-- O texto é exibido na tela.
-
-### 4. 🎤 Comando de Voz
-- O usuário emite comandos simples (ex: “ler texto”).
-- O app ativa automaticamente a funcionalidade correspondente.
+- **OCR**: Leitura de textos de imagens.
+- **STT**: Reconhecimento de fala para texto.
+- **TTS**: Síntese de fala para leitura de textos.
+- **Descrição de imagens**: Geração de descrição automática de imagens.
 
 ---
 
-## 🔹 Funcionalidades Futuras
-- Configurações de acessibilidade (volume, contraste, velocidade da fala).
-- Suporte multilíngue (português e inglês).
-- Histórico das últimas 5 ações.
+## Índice
+
+- [Funcionalidades](#funcionalidades)
+- [Instalação](#instalação)
+- [Como rodar](#como-rodar)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
 ---
 
-## 🛠️ Tecnologias
-- **Frontend:** (a definir – ex: React Native / Flutter)  
-- **Backend:** FastAPI (Python)  
-- **IA:** OCR, TTS, STT, visão computacional  
-- **Banco de dados:** (se necessário para histórico)
+## Funcionalidades
 
----
+Descreva aqui cada funcionalidade com exemplos de uso. Por exemplo:
 
-## 📂 Estrutura do Projeto
+```python
+# Exemplo de OCR
+from backend.modules.ocr import ler_imagem
 
-
-lumi-app/
-├── backend/ # Código do backend (API FastAPI, IA, OCR, TTS, STT)
-├── frontend/ # Aplicativo mobile/web
-├── docs/ # Documentação, wireframes, anotações
-├── README.md # Documentação inicial do projeto
-├── .gitignore # Arquivos/pastas ignorados pelo Git
-└── requirements.txt # Dependências do backend
+texto = ler_imagem("images/exemplo.png")
+print(texto)
 
 
+Instalação
 
----
+Clone o repositório:
+git clone https://github.com/JulianaAigueira/lumi-app.git
 
-## 🚀 Como rodar (inicialmente)
-```bash
-# Clonar o repositório
-git clone https://github.com/seu-usuario/lumi-app.git
 
-cd lumi-app
+Crie um ambiente virtual:
 
-# Instalar dependências do backend
+python -m venv venv
+
+
+Ative o ambiente:
+
+Windows: venv\Scripts\activate
+
+Mac/Linux: source venv/bin/activate
+
+Instale as dependências:
+
 pip install -r requirements.txt
 
-👥 Contribuidores
+Como rodar
+python backend/app.py
 
-Juliana Aigueira – Idealizador(a) e desenvolvedor(a) inicial
+
+Substitua app.py pelo arquivo principal do seu backend.
+
+Estrutura do Projeto
+Lumi_App/
+│
+├─ backend/         # Código principal
+│   ├─ __init__.py
+│   ├─ app.py       # Arquivo principal
+│   ├─ modules/     # Funcionalidades separadas (OCR, STT, TTS, etc.)
+│   └─ utils/       # Funções auxiliares
+│
+├─ images/          # Recursos estáticos
+├─ venv/            # Ambiente virtual (ignorado pelo git)
+├─ .gitignore
+├─ README.md
+└─ requirements.txt
+
+Contribuição
+
+Contribuições são bem-vindas!
+
+Faça um fork do projeto.
+
+Crie uma branch com sua feature: git checkout -b minha-feature
+
+Faça suas alterações e teste.
+
+Commit e push:
+
+git commit -m "Minha contribuição"
+git push origin minha-feature
